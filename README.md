@@ -1,10 +1,13 @@
 # sprint2_mongoDB_estructura
 
+Instalar: npm install mongoDB
+
 ## Exercici 1 - Òptica
 
-## NOTES:
+## COMENTARIS:
 - NOM BASE DE DADES: culampollaMongoDB
 - ARXIU JS: opticaMongo.js
+- DIAGRAMA: diagramaOpticaMongoDB.png
 
 Una òptica, anomenada “Cul d'Ampolla”, vol informatitzar la gestió dels clients/es i vendes d'ulleres.
 
@@ -34,9 +37,12 @@ El nostre sistema haurà d’indicar qui ha sigut l’empleat/da que ha venut ca
 
 ## Exercici 2 - Pizzeria
 
-## NOTES:
+## COMENTARIS:
 - NOM BASE DE DADES: pizzeriaMongoDB
-- ARXIU JS: pizzeriaMongoDB.js
+- ARXIU JS: pizzeriaMongo.js
+- DIAGRAMA: diagramaPizzeriaMongoDB.png
+
+Nota!: La colecció localities es podria suprimir, i incloure població i provincia tant a clients com a shops, per fer la DB mes senzilla.
 
 T’han contractat per a dissenyar una web que permeti fer comandes de menjar a domicili per Internet.
 
