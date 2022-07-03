@@ -1,36 +1,23 @@
 db = db.getSiblingDB('culampollaMongoDB');
 db.dropDatabase();
-db = db.getSiblingDB('culampollaMongoDB')
+db = db.getSiblingDB('culampollaMongoDB');
 
-db.createCollection('glasses');
-db.createCollection('clients');
-db.createCollection('employees');
+// db.createCollection('glasses');
+// db.createCollection('clients');
+// db.createCollection('employees');
 
 db.glasses.insertMany(
     [{
-        "_id": {
-          "$oid": "62b423baa66bb79fa87e2941"
-        },
+        "_id": ObjectId("62b423baa66bb79fa87e2941"),
         "glassBrand": "Prada",
         "glassColorFrame": "white",
-        "glassPrice": {
-          "$numberDecimal": "89.34"
-        },
-        "glassSellingDate": {
-          "$date": {
-            "$numberLong": "1612051200000"
-          }
-        },
-        "lens": {
-          "rightLensGraduation": {
-            "$numberDecimal": "2.2"
-          },
-          "leftLensGraduation": {
-            "$numberDecimal": "1.2"
-          },
+        "glassPrice": 56.80,
+        "glassSellingDate": new ISODate('2022-03-03T12:40:00Z'),
+        "lens":{"rightLensGraduation":"2.2",
+          "leftLensGraduation":"1.2",
           "colorLens": "red"
         },
-        "suppliers": {
+        "suppliers":{
           "supplierRef": "S01",
           "supplierName": "BBGLASSES",
           "supplierCellNumber": "+34 616620410",
@@ -53,27 +40,14 @@ db.glasses.insertMany(
         "clientRef": "01",
         "employeeRef": "01",
         "glassRef": "01"
-      },{
-        "_id": {
-          "$oid": "62b42e89a66bb79fa87e2947"
-        },
+    },{
+        "_id": ObjectId("62b42e89a66bb79fa87e2947"),
         "glassBrand": "Armani",
-        "glassPrice": {
-          "$numberDecimal": "105.45"
-        },
-        "glassSellingDate": {
-          "$date": {
-            "$numberLong": "1610668800000"
-          }
-        },
-        "lens": {
-          "rightLensGraduation": {
-            "$numberDecimal": "2.0"
-          },
-          "leftLensGraduation": {
-            "$numberDecimal": "1.5"
-          },
-          "colorLens": "no color"
+        "glassPrice": "105.45",
+        "glassSellingDate": new ISODate('2022-04-01T12:40:00Z'),
+        "lens":{"rightLensGraduation": "2.0",
+        "leftLensGraduation": "1.5",
+          "colorLens": "white"
         },
         "suppliers": {
           "supplierRef": "S02",
@@ -98,23 +72,18 @@ db.glasses.insertMany(
         "clientRef": "02",
         "employeeRef": "01",
         "glassRef": "02"
-       
       }]
 );
 
 db.employees.insertMany(
     [{
-        "_id": {
-          "$oid": "62bab38e3bdb5aa0c5ab4db0"
-        },
+        "_id": ObjectId("62bab38e3bdb5aa0c5ab4db0"),
         "employeeRef": "01",
         "employeeCellNumber": "+34 666 777 888",
         "employeeEmail": "malvaro@gmail.com",
         "employeeName": "Alvaro Perez"
       },{
-        "_id": {
-          "$oid": "62bab4933bdb5aa0c5ab4db2"
-        },
+        "_id": ObjectId("62bab4933bdb5aa0c5ab4db2"),
         "employeeRef": "02",
         "employeeCellNumber": "+34 666 000 888",
         "employeeEmail": "carmep@gmail.com",
@@ -124,29 +93,17 @@ db.employees.insertMany(
 
 db.clients.insertMany(
     [{
-        "_id": {
-          "$oid": "62bab5123bdb5aa0c5ab4dbb"
-        },
+        "_id": ObjectId("62bab5123bdb5aa0c5ab4dbb"),
         "clientCellName": "+34 666 777 222",
-        "clientDateRegister": {
-          "$date": {
-            "$numberLong": "1611331200000"
-          }
-        },
+        "clientDateRegister": new ISODate('2020-06-20T12:40:00Z'),
         "clientEmail": "marta@gmail.com",
         "clientRef": "01",
         "clientName": "Marta Coca",
-        "clienteRecommended": ""
+        "clienteRecommended": "null"
       },{
-        "_id": {
-          "$oid": "62bab6333bdb5aa0c5ab4dbc"
-        },
+        "_id": ObjectId("62bab6333bdb5aa0c5ab4dbc"),
         "clientCellName": "+34 000 777 222",
-        "clientDateRegister": {
-          "$date": {
-            "$numberLong": "1611417600000"
-          }
-        },
+        "clientDateRegister": new ISODate('2020-10-10T12:40:00Z'),
         "clientEmail": "marta@gmail.com",
         "clientRef": "02",
         "clientName": "Enric Mayne",
